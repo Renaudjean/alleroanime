@@ -31,13 +31,14 @@ class Router
                     $this->_ctrl = new $controllerClass($url);
                 }
                 else throw new Exception('Page introuvable');
-            }
+            } 
             else
             {
                 require_once('controllers/ControllerAccueil.php');
                 $this->_ctrl = new ControllerAccueil($url);
             }
         }
+        // Gestion des erreurs
         catch(Exception $e)
         {
             $errorMsg = $e->getMessage();
