@@ -10,10 +10,23 @@ abstract class Model{
     $AnimationTV = $Base_url.'/discover/tv?'.$api_key.'&language=en-US&sort_by=popularity.desc&with_genres=16';
   
     $AnimeMovie = file_get_contents($AnimationMovie);
-    $Animovie = json_decode($AnimeMovie);
+    $AniMovie = json_decode($AnimeMovie);
 
 
     $AnimeTV = file_get_contents($AnimationTV);
     $AnimaTV = json_decode($AnimeTV);
+
+    }
+    foreach($Animovie->results as $anime){
+        echo $anime->original_title;
+        echo $anime->overview;
+        echo "<br />";
+    }
+    foreach($AnimaTV->results as $tv){
+        echo $tv->name;
+        echo $tv->overview;
+        echo "<br />";
+    }
+
     }
 }
