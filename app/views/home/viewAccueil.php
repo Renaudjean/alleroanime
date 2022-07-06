@@ -7,9 +7,7 @@
     <title>Accueil</title>
 </head>
 <body>
-<?php 
-    foreach($articles as $article) ?>
-    <h2><?php $article->title(); ?></h2>
-    <p> <?php $article->overview(); ?></p>
+
+  hi
 </body>
 </html>
