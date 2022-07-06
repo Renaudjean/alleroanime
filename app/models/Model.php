@@ -17,16 +17,16 @@ abstract class Model{
     $AnimaTV = json_decode($AnimeTV);
 
     }
-    // foreach($Animovie->results as $anime){
-    //     echo $anime->original_title;
-    //     echo $anime->overview;
-    //     echo "<br />";
-    // }
-    // foreach($AnimaTV->results as $tv){
-    //     echo $tv->name;
-    //     echo $tv->overview;
-    //     echo "<br />";
-    // }
+    foreach($Animovie->results as $anime){
+        echo $anime->original_title;
+        echo $anime->overview;
+        echo "<br />";
+    }
+    foreach($AnimaTV->results as $tv){
+        echo $tv->name;
+        echo $tv->overview;
+        echo "<br />";
+    }
 
-    // }
+    }
 }
