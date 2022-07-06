@@ -9,12 +9,10 @@ class ApiMovies{
   
 
     public  $AnimationMovie ;
-    public $AnimationTV ;  
     public $AnimeMovie;
     public $Animovie;
     public function __construct(){
         $this->AnimationMovie = $this->Base_url.'/discover/movie?'.$this->api_key.'&language=en-US&sort_by=popularity.desc&page=1&primary_release_year=2020&with_genres=16';
-        $this->AnimationTV = $this->Base_url.'/discover/tv?'.$this->api_key.'&language=en-US&sort_by=popularity.desc&with_genres=16';
         $this->AnimeMovie = file_get_contents( $this->AnimationMovie);
         $this->Animovie = json_decode( $this->AnimeMovie);
     }
