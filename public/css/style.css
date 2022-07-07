@@ -5,43 +5,51 @@
   background-color: #242424;
   padding: 0.5em;
 }
-
 #header .title {
   text-align: center;
   color: #56FFF5;
 }
-
 #header .head-container {
   margin-right: 25%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-  -ms-flex-line-pack: end;
-      align-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  flex-flow: row wrap;
+  justify-content: right;
+  align-content: flex-end;
+  align-items: flex-end;
 }
-
 #header .head-container .search-bar {
   padding: 0.1em;
   margin-bottom: 0.1em;
 }
-
 #header .head-container .search-icon {
   width: 35x;
   height: 35px;
 }
 
+#main {
+  background-color: #1A1919;
+}
+#main h4 {
+  padding-top: 30px;
+  margin-left: 300px;
+  color: #56FFF5;
+}
+#main .swiper {
+  background-color: #3A3838;
+  width: 70vw;
+  border-radius: 10px;
+}
+#main .swiper .swiper-slide {
+  text-align: center;
+  margin-top: 10px;
+}
+#main .swiper .swiper-slide h6 {
+  width: 200px;
+  margin: 0 auto;
+  color: #56FFF5;
+}
+
 * {
   padding: 0px;
   margin: 0px;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
