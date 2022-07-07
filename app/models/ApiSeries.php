@@ -6,7 +6,7 @@ class ApiSeries{
     public $api_key = 'api_key=37c4996681ade9cfdb37958c17308c4b';
     public $Base_url = 'https://api.themoviedb.org/3';
     // public $Popular = $Base_url.'/tv/popular?api_key=37c4996681ade9cfdb37958c17308c4b&language=en-US&page=1';
-  
+   
 
     public $AnimationTV ;  
     public $AnimeSeries;
@@ -15,7 +15,10 @@ class ApiSeries{
         $AnimeSeries = file_get_contents( $this->AnimationTV);
         $this->AnimeSeries = json_decode($AnimeSeries);
     }
-
+  
+    
+     
+   
     // $AnimeTV = file_get_contents($AnimationTV);
     // $AnimaTV = json_decode($AnimeTV);
 

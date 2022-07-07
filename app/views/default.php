@@ -9,9 +9,20 @@
 <body>
   <header>
     <h1>Bienvenue sur mon blog</h1>
+    <a href="http://localhost/alleroanime/public/Series/serieslist/"> change content</a>
 </header>
 <main>
-    <?= $content ?>
+    <?php foreach($Series as $Serie){
+        echo  $Serie->name;
+        echo "<br>";
+    }
+     foreach($Movies as $Movie){
+        echo  $Movie->original_title;
+        echo "<br>";
+    }
+        ?>
+    
+    
 </main>
 <footer>
     <p>&copy; 2022</p>

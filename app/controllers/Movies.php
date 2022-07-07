@@ -5,4 +5,9 @@ class Movies extends Controller {
         $this->render('viewAccueil',['Media'=>$ApiMovies->Animovie->results]);
         
     }
+    public function hotmovielist(){ 
+        $ApiMovies = $this->model('ApiMovies');
+        $this->movierender('viewAccueil',['Media'=>$ApiMovies->Animovie->results]);
+        
+    }
 }
