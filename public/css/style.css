@@ -1,0 +1,47 @@
+#header {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #242424;
+  padding: 0.5em;
+}
+
+#header .title {
+  text-align: center;
+  color: #56FFF5;
+}
+
+#header .head-container {
+  margin-right: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#header .head-container .search-bar {
+  padding: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+#header .head-container .search-icon {
+  width: 35x;
+  height: 35px;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+/*# sourceMappingURL=style.css.map */

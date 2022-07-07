@@ -1,0 +1,29 @@
+
+#header {
+    height: fit-content;
+    background-color: #242424;
+   
+    padding: 0.5em;
+    .title{
+    
+        text-align: center;
+        color: #56FFF5;
+    }
+  .head-container{
+    margin-right: 25%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: right;
+    align-content:flex-end;
+    align-items: flex-end;          
+    .search-bar{
+        padding: 0.3em;
+        margin-bottom: 0.3em;
+    }
+    .search-icon{
+        width: 35x;
+        height: 35px;
+    }
+}
+}
+
