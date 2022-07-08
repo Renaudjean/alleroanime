@@ -5,93 +5,51 @@
   background-color: #242424;
   padding: 0.5em;
 }
-
 #header .title {
   text-align: center;
   color: #56FFF5;
 }
-
 #header .head-container {
-  margin-right: 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  margin-right: 25%;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-  -ms-flex-line-pack: end;
-      align-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  flex-flow: row wrap;
+  justify-content: right;
+  align-content: flex-end;
+  align-items: flex-end;
 }
-
 #header .head-container .search-bar {
-  padding: 0.3em;
-  margin-bottom: 0.3em;
+  padding: 0.1em;
+  margin-bottom: 0.1em;
 }
-
 #header .head-container .search-icon {
   width: 35px;
   height: 35px;
 }
 
-#header .head-container .menu-btn {
-  position: relative;
-  left: -60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  -webkit-transition: all 0.5 ease-in-out;
-  transition: all 0.5 ease-in-out;
-  border: 3px solid #56FFF5;
+#main {
+  background-color: #1A1919;
 }
-
-#header .head-container .menu-btn_burger {
-  width: 20px;
-  height: 5px;
-  background-color: #56FFF5;
-  border-radius: 4px;
-  -webkit-transition: all 0.5 ease-in-out;
-  transition: all 0.5 ease-in-out;
+#main h4 {
+  padding-top: 30px;
+  margin-left: 300px;
+  color: #56FFF5;
 }
-
-#header .head-container .menu-btn_burger ::before, #header .head-container .menu-btn_burger ::after {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 5px;
-  background-color: #56FFF5;
-  border-radius: 4px;
-  -webkit-transition: all 0.5 ease-in-out;
-  transition: all 0.5 ease-in-out;
+#main .swiper {
+  background-color: #3A3838;
+  width: 70vw;
+  border-radius: 10px;
 }
-
-#header .head-container .menu-btn_burger ::before {
-  -webkit-transform: translateY(-16px);
-          transform: translateY(-16px);
+#main .swiper .swiper-slide {
+  text-align: center;
+  margin-top: 10px;
 }
-
-#header .head-container .menu-btn_burger ::after {
-  -webkit-transform: translateY 16px;
-          transform: translateY 16px;
+#main .swiper .swiper-slide h6 {
+  width: 200px;
+  margin: 0 auto;
+  color: #56FFF5;
 }
 
 * {
   padding: 0px;
   margin: 0px;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
