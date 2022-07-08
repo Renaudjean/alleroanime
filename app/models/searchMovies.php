@@ -8,7 +8,7 @@
 
     public function __construct(){
         $this->searchMov = $this->Base_url.'https://www.themoviedb.org/search/movie?'.$api_key.'&language=en-US&query=Thisisaqui&page=1&include_adult=false'
-        $this->searchM = file_get_contents() 
+        $this->searchM = file_get_contents() ;
     }
 
     }
