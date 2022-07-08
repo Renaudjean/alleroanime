@@ -1,0 +1,24 @@
+#main-accueil {
+    background-color:#1A1919;
+    h4{
+        padding-top: 30px;
+        margin-left: 300px;
+        color:#56FFF5 ;
+    }
+    .swiper {
+        background-color: #3A3838;
+        width: 70vw;
+        border-radius: 10px;
+        .swiper-slide{
+            text-align: center;
+            margin-top: 10px;
+            h6{
+                width: 200px;
+                margin: 0 auto;
+                color:#56FFF5 ;
+
+            }
+        }
+    }
+    
+}
