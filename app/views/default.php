@@ -18,6 +18,13 @@
   <header id="header">
     <h1 class="title">AllerOAnime</h1>
     <div class="head-container">
+       <div class="menu-btn"> 
+            <div class="menu-btn_burger">
+            
+            </div> 
+        </div> 
+    <div class="head-container">
+    
         <input type="text" class="search-bar" placeholder="Search...">  
         <img class="search-icon" src="../../../public/asset/icons8-google-web-search.svg">
     </div>
@@ -78,6 +85,7 @@
 <footer>
     <p>&copy; 2022</p>
 </footer>  
+<script src="../../../public/Animation/main.js"> </script>
 </body>
 </html>
     
