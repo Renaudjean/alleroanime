@@ -23,8 +23,16 @@
               <div class="menu-btn_burger"></div> 
              
         </div>
-          <input type="text" class="search-bar" placeholder="Search...">  
-          <img class="search-icon" src="../../../public/asset/icons8-google-web-search.svg">
+        <form method="post">
+          <input type="text" name="search-bar" class="search-bar" placeholder="Search...">  
+          <input type="image" class="search-icon" src="../../../public/asset/icons8-google-web-search.svg" name="submit" alt="Submit">
+        </form>
+        <?php
+          // if (isset($_POST['sumbit'])){
+          //   $str = $_POST['search'];
+          //   $stre = 
+          // }
+        ?>
     </div>
   </header>
   <div class="menu-bar">
@@ -32,63 +40,11 @@
                   <li> <a href="">Acceuil</a> </li>
                   <li> <a href="">Category</a> </li>
                 </ul>  
-              </div>
-  <main id="main">
-        <h4>Popular Series</h4>
-        <section class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <?php foreach($Series as $Serie){ ?>
-                <div class="swiper-slide">
-                    <img src="https://image.tmdb.org/t/p/w200/<?=$Serie->poster_path?>">
-                    <h6><?= $Serie->name?></h6> 
-                </div>
-               <?php }?>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <!-- <div class="swiper-pagination"></div> -->
-        </section> 
-        <h4>Popular Movies</h4>
-        <section class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <?php foreach($Movies as $Movie){ ?>
-                <div class="swiper-slide">
-                    <img src="https://image.tmdb.org/t/p/w200/<?=$Movie->poster_path?>">
-                    <h6><?= $Movie->original_title?></h6> 
-            </div>
-           <?php }?>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <!-- <div class="swiper-pagination"></div> -->
-    </section>
+  </div>
+            
+     <?= $content ;?>
+        
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4,
-        // spaceBetween: 30,
-        slidesPerGroup: 4,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
-
-  </main>
-<footer>
-    <p>&copy; 2022</p>
-</footer>  
 <script src="../../../public/Animation/main.js"> </script>
 </body>
 </html>
