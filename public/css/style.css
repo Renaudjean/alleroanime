@@ -7,12 +7,13 @@
 }
 
 #header .title {
+  font-family: 'Inter', sans-serif;
   text-align: center;
   color: #56FFF5;
 }
 
 #header .head-container {
-  margin-right: 5%;
+  margin-right: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,6 +107,102 @@
 #header .menu-btn.open .menu-btn_burger::after {
   -webkit-transform: rotate(-45deg) translate(35px, 35px);
           transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.menu-bar {
+  height: 100vh;
+  width: 0px;
+  position: absolute;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  background-color: #242424;
+  text-align: left;
+  z-index: 0;
+}
+
+.menu-bar ul {
+  position: absolute;
+  left: -200px;
+  list-style: none;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.menu-bar ul a {
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  color: #56FFF5;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: large;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.menu-bar.open {
+  height: 100vh;
+  width: 150px;
+  position: absolute;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  background-color: #242424;
+}
+
+.menu-bar.open ul {
+  position: absolute;
+  left: 0px;
+  list-style: none;
+}
+
+.menu-bar.open ul a {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+  color: #56FFF5;
+  opacity: 1;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: large;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  visibility: visible;
+}
+
+@-webkit-keyframes slidein {
+  0% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+
+@-webkit-keyframes slideout {
+  0% {
+    margin-left: 0%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}
+
+@keyframes slideout {
+  0% {
+    margin-left: 0%;
+  }
+  100% {
+    margin-left: -300%;
+  }
 }
 
 #main {
