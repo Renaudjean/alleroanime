@@ -16,12 +16,13 @@ class Controller{
            } 
         }
         extract($datas);
+        
         // On démarre le buffer
-
         ob_start();
 
         require_once('../app/views/'.$fichier.'.php');
-        
+
+        // Lit le contenu de sortie puis l'efface
         $content = ob_get_clean();
 
         require_once('../app/views/default.php');
