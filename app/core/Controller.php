@@ -13,7 +13,6 @@ class Controller{
         foreach($datas as $element) {
             extract($element);
            } 
-
         }
         extract($datas);
         

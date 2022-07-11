@@ -1,5 +1,5 @@
 
-  <main id="main-categorie">
+  <main id="main-accueil">
     <?php
     ?><div class="dropdown">
         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Fantasy</a>
@@ -11,5 +11,14 @@
         </ul>
     </div>
 
-    <?php var_dump($catSearch)  ?>
+    <?php foreach($seachResults as $seachResult){ 
+      if($seachResult->media_type == "tv"){
+        echo $seachResult->name;
+        echo "<br>";
+      }
+      if($seachResult->media_type == "movie"){
+        echo $seachResult->original_title;
+        echo "<br>";
+      }
+    }?>
   </main>
