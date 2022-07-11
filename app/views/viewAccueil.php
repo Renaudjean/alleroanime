@@ -1,11 +1,10 @@
-
-<main id="main">
-<h4>Popular Series</h4>
+<main id="main-accueil">
+        <h4>Popular Series</h4>
         <section class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <?php foreach($Series as $Serie){ ?>
                 <div class="swiper-slide">
-                    <img src="https://image.tmdb.org/t/p/w200/<?=$Serie->poster_path?>">
+                    <a href=""><img src="https://image.tmdb.org/t/p/w200/<?=$Serie->poster_path?>"></a>
                     <h6><?= $Serie->name?></h6> 
                 </div>
                <?php }?>
@@ -19,7 +18,7 @@
             <div class="swiper-wrapper">
                 <?php foreach($Movies as $Movie){ ?>
                 <div class="swiper-slide">
-                    <img src="https://image.tmdb.org/t/p/w200/<?=$Movie->poster_path?>">
+                    <a href="viewInfo.php"><img src="https://image.tmdb.org/t/p/w200/<?=$Movie->poster_path?>"></a>
                     <h6><?= $Movie->original_title?></h6> 
             </div>
            <?php }?>
