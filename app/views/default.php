@@ -23,8 +23,8 @@
               <div class="menu-btn_burger"></div> 
              
         </div>
-        <form action="../viewInfo"  method="get">
-          <input type="text" name="search-bar" class="search-bar" placeholder="Search...">  
+        <form action="../viewCategorie.php"  method="GET">
+          <input type="text" name="query" class="search-bar" placeholder="Search...">  
           <input type="image" class="search-icon" src="../../../public/asset/icons8-google-web-search.svg" name="submit" alt="Submit">
         </form>
         <?php

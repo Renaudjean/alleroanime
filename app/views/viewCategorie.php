@@ -1,8 +1,7 @@
-<?php 
-var_dump($seachResult);
-?>
+
   <main id="main-categorie">
-    <div class="dropdown">
+    <?php
+    ?><div class="dropdown">
         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Fantasy</a>
 
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -11,4 +10,6 @@ var_dump($seachResult);
             <li><a class="dropdown-item" href="#">Something else here</a></li>
         </ul>
     </div>
+
+    <?php var_dump($catSearch)  ?>
   </main>
