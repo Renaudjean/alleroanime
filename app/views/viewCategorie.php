@@ -11,14 +11,21 @@
         </ul>
     </div>
 
-    <?php foreach($seachResults as $seachResult){ 
-      if($seachResult->media_type == "tv"){
-        echo $seachResult->name;
-        echo "<br>";
-      }
-      if($seachResult->media_type == "movie"){
-        echo $seachResult->original_title;
-        echo "<br>";
-      }
-    }?>
+    <?php 
+    var_dump($seachResults);
+    foreach($seachResults as $seachResult){ ?>
+
+      <?php  if($seachResult->media_type == "tv"){?>
+        <h6> <?= $seachResult->name; ?> </h6>
+        <p><?= $seachResult->overview;?> </p>
+        <a href="viewInfo.php"><img src="https://image.tmdb.org/t/p/w200/<?=$seachResult->poster_path?>"></a>
+        <br>;
+        <?php }?>
+        <?php  if($seachResult->media_type == "movie"){?>
+        <h6><?= $seachResult->original_title;?> </h6>
+        <p><?= $seachResult->overview;?> </p>
+        <a href="viewInfo.php"><img src="https://image.tmdb.org/t/p/w200/<?=$seachResult->poster_path?>"></a>
+       <br>;
+       <?php  }?>
+       <?php  }?>
   </main>
