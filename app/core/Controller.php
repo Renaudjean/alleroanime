@@ -21,6 +21,7 @@ class Controller{
         ob_start();
 
         require_once('../app/views/'.$fichier.'.php');
+        
         $content = ob_get_clean();
       
         require_once('../app/views/default.php');
