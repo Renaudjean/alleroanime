@@ -1,7 +1,6 @@
 
-  <main id="main-accueil">
-    <?php
-    ?><div class="dropdown">
+  <main id="main-categorie">
+    <div class="dropdown">
         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Fantasy</a>
 
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -28,4 +27,6 @@
        <br>;
        <?php  }?>
        <?php  }?>
+
+    </div>
   </main>
