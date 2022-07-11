@@ -16,6 +16,11 @@ abstract class Model{
     $AnimeTV = file_get_contents($AnimationTV);
     $AnimaTV = json_decode($AnimeTV);
 
+    // $CategoriesTV = $Base_url.'/genre/tv/list?'.$api_key.'&language=en-US';
+    // $CategoriesSeries = file_get_contents( $CategoriesTV);
+    // $CategoriesSeries = json_decode($CategoriesSeries);
+
+
     }
     // foreach($Animovie->results as $anime){
     //     echo $anime->original_title;

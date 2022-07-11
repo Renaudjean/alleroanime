@@ -9,8 +9,7 @@ class Home extends Controller {
         // find the models for the instructions in Controller 
         $ApiMovies = $this->model('ApiMovies');
         $ApiSeries = $this->model('ApiSeries');
-        
-        $this->render('default',['Series'=>$ApiSeries->AnimeSeries->results, 'Movies'=>$ApiMovies->Animovie->results]);
+        $this->render('viewAccueil',['Series'=>$ApiSeries->AnimeSeries->results, 'Movies'=>$ApiMovies->Animovie->results]);
     
     }
 }   

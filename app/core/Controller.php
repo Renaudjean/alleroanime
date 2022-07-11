@@ -9,21 +9,22 @@ class Controller{
 
     // Function render will extract the data in the controller
     public function render(string $fichier, array $datas = []){
-      
+        if (gettype($datas) == "object"){
         foreach($datas as $element) {
-           if (gettype($element) == "object"){
             extract($element);
            } 
         }
         extract($datas);
+        
         // On démarre le buffer
-
         ob_start();
 
-
-        $content = ob_get_clean();
         require_once('../app/views/'.$fichier.'.php');
 
+        // Lit le contenu de sortie puis l'efface
+        $content = ob_get_clean();
+
+        require_once('../app/views/default.php');
     }
     
 }
