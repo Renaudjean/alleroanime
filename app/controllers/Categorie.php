@@ -9,7 +9,9 @@ class Categorie extends Controller {
         $ApiCategorieSeries = $this->model('ApiCategorieSeries');
 
         
-        $this->render('viewCategorie',['CateSeries'=>$ApiCategorieSeries->CategoriesSeries->results]);
+        $this->render('viewCategorie',['CatSeries'=>$ApiCategorieSeries->CatSeries->genres]);
+        // var_dump($ApiCategorieSeries->CatSeries);
+        // $this->render('viewCategorie',['catSearch'=>$ApiCategorieSeries->CatSeries]);
        
     
     }   

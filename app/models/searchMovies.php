@@ -7,7 +7,7 @@
     public $searchM;
 
     public function __construct(){
-        $this->searchMovies = $this->Base_url.'/search/movie?'.$this->api_key.'&language=en-US&query=the+international&page=1&include_adult=false';
+        $this->searchMovies = $this->Base_url.'/search/multi?'.$this->api_key.'&language=en-US&query=dragonball%20z&page=1&include_adult=false';
         $this->searchM = file_get_contents($this->searchMovies) ;
         $this->searchM = json_decode($this->searchM);
 

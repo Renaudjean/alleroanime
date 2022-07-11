@@ -164,6 +164,7 @@
   }
 }
 #main-accueil {
+  padding-top: 15vh;
   background-color: #1A1919;
   padding-top: 15vh;
 }
@@ -190,11 +191,17 @@
 #main-categorie {
   background-color: #1A1919;
   height: 100vh;
+  padding-top: 15vh;
 }
-#main-categorie .dropdown-menu {
-  display: none;
+#main-categorie .dropdown {
+  left: 20%;
+  top: 50px;
 }
-#main-categorie a {
+#main-categorie .dropdown .dropdown-menu {
+  background-color: #242424;
+  margin-left: 50px;
+}
+#main-categorie .dropdown .dropdown-menu a {
   color: aqua;
 }
 
