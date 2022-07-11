@@ -23,15 +23,12 @@
               <div class="menu-btn_burger"></div> 
              
         </div>
-        <form method="post">
+        <form action="../viewInfo"  method="get">
           <input type="text" name="search-bar" class="search-bar" placeholder="Search...">  
           <input type="image" class="search-icon" src="../../../public/asset/icons8-google-web-search.svg" name="submit" alt="Submit">
         </form>
         <?php
-          // if (isset($_POST['sumbit'])){
-          //   $str = $_POST['search'];
-          //   $stre = 
-          // }
+       
         ?>
     </div>
   </header>
