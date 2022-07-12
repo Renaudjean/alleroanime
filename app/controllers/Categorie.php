@@ -27,14 +27,16 @@ public function searchCategorie(){
    
     if( strpos($url, $key) == TRUE){
     $searchMovies = $this->model('searchMovies');
-    $this->render('viewCategorie',['searchResults'=>$searchMovies->searchM->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres, 'MovieGenre'=> '','SerieGenre'=>'']);
-    }else{
+    $this->render('viewCategorie',['searchResults'=>$searchMovies->searchM->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres, 'MovieGenres'=> '','SerieGenres'=>'']);
+    }
     
+    if( strpos($url, $key) == FALSE){
     $GenreMovies = $this->model('GenreMovies');
     $GenreSeries = $this->model('GenreSeries');
-    $this->render('viewCategorie',['MovieGenre'=>$GenreMovies->GenreM->results, 'SerieGenre'=>$GenreMovies->GenreM->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres,  'searchResults'=>'']);
+    $this->render('viewCategorie',['MovieGenres'=>$GenreMovies->GenreM->results, 'SerieGenres'=>$GenreSeries->GenreS->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres,  'searchResults'=>'']);
     }
-}
+    }
+
   
         
         
