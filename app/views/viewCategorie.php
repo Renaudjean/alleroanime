@@ -5,28 +5,33 @@
 
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
         <?php foreach($CatSeries as $CategoSerie){  ?>
-            <li><a class="dropdown-item" href="<?=$CategoSerie->id?>"><?=$CategoSerie->name?></a></li>
+            <li><a class="dropdown-item" href="id=<?=$CategoSerie->id?>"><?=$CategoSerie->name?></a></li>
             <?php } ?>
         </ul>
     </div>
 
     <?php 
-    var_dump($seachResults);
-    foreach($seachResults as $seachResult){ ?>
-
-      <?php  if($seachResult->media_type == "tv"){?>
-        <h6> <?= $seachResult->name; ?> </h6>
-        <p><?= $seachResult->overview;?> </p>
-        <a href="viewInfo.php"><img src="https://image.tmdb.org/t/p/w200/<?=$seachResult->poster_path?>"></a>
+    //  var_dump($searchResults);
+     if($searchResults != ''){
+     foreach($searchResults as $searchResult){
+      if($searchResult->media_type == "tv" && in_array("16", $searchResult->genre_ids)){?>
+        <h6> <?= $searchResult->name; ?> </h6>
+        <p><?= $searchResult->overview;?> </p>
+        <a href="viewInfo.php"><img src="https://image.tmdb.org/t/p/w200/<?=$searchResult->poster_path?>"></a>
         <br>;
-        <?php }?>
-        <?php  if($seachResult->media_type == "movie"){?>
-        <h6><?= $seachResult->original_title;?> </h6>
-        <p><?= $seachResult->overview;?> </p>
-        <a href="viewInfo.php"><img src="https://image.tmdb.org/t/p/w200/<?=$seachResult->poster_path?>"></a>
-       <br>;
-       <?php  }?>
-       <?php  }?>
+        <?php }
+         if($searchResult->media_type == "movie" && in_array("16", $searchResult->genre_ids)){?>
+        <h6><?= $searchResult->original_title;?> </h6>
+        <p><?= $searchResult->overview;?> </p>
+        <a href="viewInfo.php"><img src="https://image.tmdb.org/t/p/w200/<?=$searchResult->poster_path?>"></a>
+       <br>
+       <?php  }
+           }
+        }
+        if($searchResults != ''){
+          
+          
+        }?>
 
     </div>
   </main>

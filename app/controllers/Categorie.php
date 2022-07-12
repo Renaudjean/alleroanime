@@ -12,9 +12,28 @@ class Categorie extends Controller {
 //         // $this->render('viewCategorie',['catSearch'=>$ApiCategorieSeries->CatSeries]);
 // }
 public function searchCategorie(){ 
-    $searchMovies = $this->model('searchMovies');
+    $key = "query";
+    if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')  {
+        $url = "https://";   
+    }else  {
+        $url = "http://";   
+    // Append the host(domain name, ip) to the URL.   
+    $url.= $_SERVER['HTTP_HOST'];   
+
+    // Append the requested resource location to the URL   
+    $url.= $_SERVER['REQUEST_URI'];    
+}
     $ApiCategorieSeries = $this->model('ApiCategorieSeries');
-    $this->render('viewCategorie',['seachResults'=>$searchMovies->searchM->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres]);
+   
+    if( strpos($url, $key) == TRUE){
+    $searchMovies = $this->model('searchMovies');
+    $this->render('viewCategorie',['searchResults'=>$searchMovies->searchM->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres, 'MovieGenre'=> '','SerieGenre'=>'']);
+    }else{
+    
+    $GenreMovies = $this->model('GenreMovies');
+    $GenreSeries = $this->model('GenreSeries');
+    $this->render('viewCategorie',['MovieGenre'=>$GenreMovies->GenreM->results, 'SerieGenre'=>$GenreMovies->GenreM->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres,  'searchResults'=>'']);
+    }
 }
   
         
