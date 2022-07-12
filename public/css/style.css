@@ -245,8 +245,9 @@
 
 #main-categorie {
   background-color: #1A1919;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 15vh;
+  max-width: 100vw;
 }
 
 #main-categorie .dropdown {
