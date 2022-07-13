@@ -1,9 +1,13 @@
 <?php 
 class search extends Controller {
     public function viewCategorie(){ 
-        $searchMovies = $this->model('searchMovies');
-        $this->render('viewCategorie',['seachResult'=>$searchMovies->searchM->results]);
-        
+        $results = [];
+        if($_GET['query']=True){
+            $searchMovies = $this->model('searchMovies');
+            $this->render('viewCategorie',['seachResult'=>$searchMovies->searchM->results]);
+        }else{
+           
+        }
     }
     
     

@@ -9,11 +9,11 @@ class ApiCategorieSeries{
 
     public $CategoriesTV ;  
     public $CategoriesSeries;
+    public $CatSeries;
     public function __construct(){
         $this->CategoriesTV = $this->Base_url.'/genre/tv/list?'.$this->api_key.'&language=en-US';
-        $CategoriesSeries = file_get_contents( $this->CategoriesTV);
-        $this->CategoriesSeries = json_decode($CategoriesSeries);
-        echo $CategoriesSeries;
+        $this->CategoriesSeries = file_get_contents( $this->CategoriesTV);
+        $this->CatSeries = json_decode($this->CategoriesSeries);
     }
   
      

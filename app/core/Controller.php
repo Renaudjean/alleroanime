@@ -9,11 +9,11 @@ class Controller{
 
     // Function render will extract the data in the controller
     public function render(string $fichier, array $datas = []){
-      
+        if (gettype($datas) == "object"){
         foreach($datas as $element) {
-           if (gettype($element) == "object"){
             extract($element);
            } 
+
         }
         extract($datas);
         
