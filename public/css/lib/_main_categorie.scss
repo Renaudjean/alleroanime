@@ -15,5 +15,17 @@
         
         }
     }
+    .clearfix{
+        width: 200px;
+        margin: 50px auto;
+        display: flex;
+        #titre-categorie{
+            color: white;
+        }
+
+        p{
+            color:white;
+        }
+    }
  
 }

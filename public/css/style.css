@@ -204,6 +204,52 @@
 #main-categorie .dropdown .dropdown-menu a {
   color: aqua;
 }
+#main-categorie .clearfix {
+  width: 200px;
+  margin: 50px auto;
+  display: flex;
+}
+#main-categorie .clearfix #titre-categorie {
+  color: white;
+}
+#main-categorie .clearfix p {
+  color: white;
+}
+
+#main-info {
+  background-color: #1A1919;
+  height: 100vh;
+  padding-top: 15vh;
+}
+#main-info #info-container {
+  margin-left: 15px;
+}
+#main-info .clearfix {
+  width: 70%;
+  margin: 50px auto;
+  display: flex;
+}
+#main-info .clearfix #titre-info {
+  color: #56FFF5;
+  margin-left: 15px;
+}
+#main-info .clearfix #p-name {
+  display: inline;
+  color: #56FFF5;
+  margin-left: 15px;
+}
+#main-info .clearfix #info-overviews {
+  background-color: #3A3838;
+  margin-top: 50px;
+}
+#main-info .clearfix #info-overviews h5 {
+  color: #56FFF5;
+  margin-left: 15px;
+}
+#main-info .clearfix #info-overviews #p-overview {
+  color: #56FFF5;
+  margin: 0 15px;
+}
 
 * {
   padding: 0px;

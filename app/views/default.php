@@ -36,7 +36,6 @@
                 <ul>
                   <li> <a href="../../Home/accueil/">Accueil</a> </li>
                   <li> <a href="../../Categorie/genre/">Catégorie</a> </li>
-                  <!-- <li> <a href="">Series</a> </li> -->
                 </ul>  
   </div>
             
