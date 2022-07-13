@@ -1,11 +1,14 @@
 #main-categorie {
     background-color:#1A1919;
-    min-height: 100vh;
+    min-height: 100%;
+    height: 100%;
     padding-top: 15vh;
+    padding-bottom: 2vh;
     max-width: 100vw;
     .dropdown{
-        left: 20%;
+        padding-left: 20%;
         top: 50px;
+        
         .dropdown-menu{
         background-color: #242424;
         margin-left: 50px;
@@ -14,7 +17,51 @@
             // background-color: #242424;
         }
         
-        }
+       }
     }
- 
+   
+} 
+.counter{
+    margin: 75px 175px -25px 175px ;
+    width: 80%;
 }
+
+    .counter:nth-child(odd) {
+        background:#1A1919;
+        
+    }
+    .counter:nth-child(even) {
+        background-color:#303030;
+        
+
+}
+.cat-cards{
+    padding: 10px;
+        display: grid;
+        
+        grid-template: 1fr/1fr 5fr; 
+        grid-column-gap: 20px;
+    
+        
+    }
+    .cell2{
+        grid-row: 1 ; 
+        grid-column: 2/3; 
+    }
+    .title{
+        color: aqua;
+    }
+    .overview{ 
+       
+        color: aqua;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 10;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .cover-photo{
+        grid-row: 1; 
+        grid-column: 1; 
+       
+        
+    }
