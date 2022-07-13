@@ -19,7 +19,7 @@ class Info extends Controller {
         $ApiInfoCreditsMovies = $this->model("ApiInfoMovies");
         $creditMovies = $ApiInfoCreditsMovies->getCredits($index);
         // var_dump($datasMovies);
-        var_dump($creditMovies);
+        // var_dump($creditMovies);
         $this->render('viewInfo',['infoSeries'=> $datasMovies, 'infoCredits' => $creditMovies]);
     }
 }  
