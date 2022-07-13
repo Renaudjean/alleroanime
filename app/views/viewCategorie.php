@@ -26,7 +26,7 @@
         <h6 class="title"> <?= $searchResult->name; ?> </h6>
         <p class="overview"><?= $searchResult->overview;?> </p>
         </div>
-        <a href="viewInfo.php" class="cover-photo"><img src="https://image.tmdb.org/t/p/w200/<?=$searchResult->poster_path?>"></a>
+        <a href="../../Info/infoMovies/<?= $searchResult->id;?>" class="cover-photo"><img src="https://image.tmdb.org/t/p/w200/<?=$searchResult->poster_path?>"></a>
         </div>
         </div>
         <?php }
@@ -39,7 +39,7 @@
           <h6 class="title"><?= $searchResult->original_title;?> </h6>
           <p class="overview"><?= $searchResult->overview;?> </p>
         </div>
-        <a href="viewInfo.php" class="cover-photo"><img src="https://image.tmdb.org/t/p/w200/<?=$searchResult->poster_path?>"></a>
+        <a href="../../Info/infoSeries/<?= $searchResult->id;?> " class="cover-photo"><img src="https://image.tmdb.org/t/p/w200/<?=$searchResult->poster_path?>"></a>
         </div>
        </div>
        <?php  }
@@ -55,7 +55,7 @@
               <h6 class="title"> <?= $SerieGenre->name; ?> </h6>
               <p class="overview"><?= $SerieGenre->overview;?> </p>
             </div>
-            <a href="viewInfo.php" class="cover-photo"><img src="https://image.tmdb.org/t/p/w200/<?=$SerieGenre->poster_path?>"></a>
+            <a href="../../Info/infoSeries/<?= $SerieGenre->id;?>" class="cover-photo"><img src="https://image.tmdb.org/t/p/w200/<?=$SerieGenre->poster_path?>"></a>
             </div>
             </div>
           <?php $picture =$SerieGenre->poster_path;
@@ -68,7 +68,7 @@
                 <h6 class="title"><?= $MovieGenre->original_title;?> </h6>
                 <p class="overview"><?= $MovieGenre->overview;?> </p>
               </div>
-              <a href="viewInfo.php" class="cover-photo"><img src="https://image.tmdb.org/t/p/w200/<?=$MovieGenre->poster_path?>"></a>
+              <a href="../../Info/infoMovies/<?= $MovieGenre->id;?>" class="cover-photo"><img src="https://image.tmdb.org/t/p/w200/<?=$MovieGenre->poster_path?>"></a>
               </div>
               </div>
             <?php   }
