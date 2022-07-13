@@ -2,18 +2,19 @@
     background-color:#1A1919;
     height: 100vh;
     padding-top: 15vh;
+}
+.clearfix{
+    width: 70%;
+    margin: 50px auto;
+    display: flex;
+    
     #info-container{
         margin-left: 15px;
-    }
-    .clearfix{
-        width: 70%;
-        margin: 50px auto;
-        display: flex;
         #titre-info{
             color:#56FFF5;
             margin-left: 15px;
         }
-
+        
         #p-name{
             display: inline;
             color:#56FFF5;
@@ -33,5 +34,15 @@
             }
         }
     }
- 
+    
+}
+#info-voice{
+    display: flex;
+    h6{
+        color: #56FFF5;
+    }
+    p{
+        color: #56FFF5;
+    }
+
 }

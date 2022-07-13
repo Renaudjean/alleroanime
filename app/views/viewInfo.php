@@ -13,12 +13,15 @@
             <h5>Synopsis</h5>
             <p id="p-overview"><?=$infoSeries ->overview?></p>
         </div>
-        <div id="info-voice">
-        <?php foreach($infoCredits->cast  as $nameGenre){  ?>
-
-
-            <?php } ?>
-        </div>
       </div>
+    </div>
+    <div id="info-voice">
+        <?php foreach($infoCredits->cast as $info){  ?>
+          <img src="https://image.tmdb.org/t/p/w92/<?= $info->profile_path ?>" alt="...">
+          <div>
+            <h6><?=$info->name?></h6>
+            <p><?=$info->character?></p>
+          </div>
+      <?php } ?>
     </div>
 </main>

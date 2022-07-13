@@ -255,34 +255,45 @@
   height: 100vh;
   padding-top: 15vh;
 }
-#main-info #info-container {
-  margin-left: 15px;
-}
-#main-info .clearfix {
+
+.clearfix {
   width: 70%;
   margin: 50px auto;
   display: flex;
 }
-#main-info .clearfix #titre-info {
+.clearfix #info-container {
+  margin-left: 15px;
+}
+.clearfix #info-container #titre-info {
   color: #56FFF5;
   margin-left: 15px;
 }
-#main-info .clearfix #p-name {
+.clearfix #info-container #p-name {
   display: inline;
   color: #56FFF5;
   margin-left: 15px;
 }
-#main-info .clearfix #info-overviews {
+.clearfix #info-container #info-overviews {
   background-color: #3A3838;
   margin-top: 50px;
 }
-#main-info .clearfix #info-overviews h5 {
+.clearfix #info-container #info-overviews h5 {
   color: #56FFF5;
   margin-left: 15px;
 }
-#main-info .clearfix #info-overviews #p-overview {
+.clearfix #info-container #info-overviews #p-overview {
   color: #56FFF5;
   margin: 0 15px;
+}
+
+#info-voice {
+  display: flex;
+}
+#info-voice h6 {
+  color: #56FFF5;
+}
+#info-voice p {
+  color: #56FFF5;
 }
 
 * {
