@@ -5,15 +5,19 @@ class Categorie extends Controller {
         $this->index = $index;
        }
        
-    public function genre(){ 
-        $ApiCategorieSeries = $this->model('ApiCategorieSeries');
-
-        
-        $this->render('viewCategorie',['CatSeries'=>$ApiCategorieSeries->CatSeries->genres]);
-        // var_dump($ApiCategorieSeries->CatSeries);
-        // $this->render('viewCategorie',['catSearch'=>$ApiCategorieSeries->CatSeries]);
+//     public function genre(){ 
        
-    
-    }   
+//         $this->render('viewCategorie');
+//         // var_dump($ApiCategorieSeries->CatSeries);
+//         // $this->render('viewCategorie',['catSearch'=>$ApiCategorieSeries->CatSeries]);
+// }
+public function searchCategorie(){ 
+    $searchMovies = $this->model('searchMovies');
+    $ApiCategorieSeries = $this->model('ApiCategorieSeries');
+    $this->render('viewCategorie',['seachResults'=>$searchMovies->searchM->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres]);
+}
+  
+        
+        
    
 }
