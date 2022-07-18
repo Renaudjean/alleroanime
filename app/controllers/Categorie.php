@@ -25,9 +25,15 @@ public function searchCategorie(){
 }
     $ApiCategorieSeries = $this->model('ApiCategorieSeries');
    $Cgenre ="genre";
-    if( strpos($url, $key) == TRUE){
+   $check = $_GET['query'];
+    if( strpos($url, $key) == TRUE && $check != ''){
     $searchMovies = $this->model('searchMovies');
     $this->render('viewCategorie',['searchResults'=>$searchMovies->searchM->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres, 'MovieGenres'=> '','SerieGenres'=>'']);
+    } else{
+    $GenreMovies = $this->model('GenreMovies');
+    $GenreSeries = $this->model('GenreSeries');
+    $this->render('viewCategorie',['MovieGenres'=>$GenreMovies->GenreM->results, 'SerieGenres'=>$GenreSeries->GenreS->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres,  'searchResults'=>'']);
+   
     }
     
     if( strpos($url, $key) == FALSE){
