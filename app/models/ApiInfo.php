@@ -6,13 +6,18 @@ class ApiInfo{
     public $api_key = 'api_key=37c4996681ade9cfdb37958c17308c4b';
     public $Base_url = 'https://api.themoviedb.org/3';
 
-    public function getInfo($index){
+    public function getInfoTv($index){
         
         $datasTv = $this->Base_url."/tv/$index?".$this->api_key.'&language=en-US';
         $datas = file_get_contents( $datasTv);
         $datasInfo= json_decode($datas);
-        return $datasInfo;
-        
+        return $datasInfo; 
+    }
+    public function getCreditsTV($index){
+        $datasCreditsTv = $this->Base_url."/tv/$index/credits?".$this->api_key.'&language=en-US';
+        $data = file_get_contents($datasCreditsTv);
+        $datasCreditsInfoSeries = json_decode($data);
+        return $datasCreditsInfoSeries;
     }
      
 // https://api.themoviedb.org/3/tv/{tv_id}?api_key=<<api_key>>&language=en-US

@@ -7,9 +7,13 @@ class Info extends Controller {
 
     public function infoSeries($index){
         $ApiInfo = $this->model("ApiInfo");
-        $datasSeries = $ApiInfo->getInfo($index);
-        // var_dump($datasSeries);
-        $this->render('viewInfo',['infoSeries'=>$datasSeries]);
+        $datasSeries = $ApiInfo->getInfoTv($index);
+
+        $ApiInfoCreditSeries = $this->model("ApiInfo");
+        $creditSeries = $ApiInfoCreditSeries->getCreditsTv($index);
+
+        // var_dump($creditSeries);
+        $this->render('viewInfo',['infoSeries'=>$datasSeries, 'infoCreditsSeries' => $creditSeries]);
         
     }
     public function infoMovies($index){
