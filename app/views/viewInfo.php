@@ -15,13 +15,45 @@
         </div>
       </div>
     </div>
-    <div id="info-voice">
-        <?php foreach($infoCredits->cast as $info){  ?>
-          <img src="https://image.tmdb.org/t/p/w92/<?= $info->profile_path ?>" alt="...">
-          <div>
-            <h6><?=$info->name?></h6>
-            <p><?=$info->character?></p>
-          </div>
-      <?php } ?>
+ 
     </div>
+    <section id="voice-actors"class="swiper mySwiper">
+      <h5>Voice Actors</h5>
+            <div class="swiper-wrapper">
+                <?php foreach($infoCredits->cast ?? $infoCreditsSeries->cast as $info){ ?>
+                <div class="swiper-slide">
+                <img src="https://image.tmdb.org/t/p/w92/<?= $info->profile_path ?>" alt="...">
+                <div>
+                  <h6><?=$info->name?></h6>
+                  <p><?=$info->character?></p>
+                </div> 
+              </div>
+           <?php }?>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- <div class="swiper-pagination"></div> -->
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 5,
+        // spaceBetween: 30,
+        slidesPerGroup: 5,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
 </main>
