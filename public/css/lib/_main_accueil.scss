@@ -9,11 +9,12 @@
     }
     .swiper {
         background-color: #3A3838;
-        width: 70vw;
+        width: clamp(800px, 1200px);
         border-radius: 10px;
         .swiper-slide{
             text-align: center;
             margin-top: 10px;
+
             h6{
                 width: 200px;
                 margin: 0 auto;
