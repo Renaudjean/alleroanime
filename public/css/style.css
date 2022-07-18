@@ -263,7 +263,31 @@
   color: #56FFF5;
 }
 
+.swiper {
+  width: 70vw;
+  border-radius: 10px;
+}
+.swiper h5 {
+  color: #56FFF5;
+}
+.swiper .swiper-slide {
+  text-align: center;
+  margin-top: 10px;
+}
+.swiper .swiper-slide h6 {
+  width: 200px;
+  margin: 0 auto;
+  color: #56FFF5;
+}
+.swiper .swiper-slide p {
+  color: #56FFF5;
+}
+
 * {
   padding: 0px;
   margin: 0px;
+}
+
+body {
+  background-color: #1A1919;
 }/*# sourceMappingURL=style.css.map */
