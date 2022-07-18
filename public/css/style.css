@@ -229,6 +229,7 @@
 #main-accueil .swiper {
   background-color: #3A3838;
   width: clamp(800px, 1200px);
+  z-index: 1;
   border-radius: 10px;
 }
 
