@@ -34,8 +34,9 @@
 
    
     .menu-btn{
+        z-index: 100;
         position: relative;
-        left: -65%;
+        right: 50vw;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -44,10 +45,12 @@
         cursor: pointer;
         transition: all 1s ease-in-out;
         border: 3px solid #56FFF5;
+
     }
     .menu-btn_burger{
         width: 20px;
         height: 5px;
+        z-index: 100;
         background-color: #56FFF5;
         border-radius:4px; 
         transition: all 1s ease-in-out;
@@ -55,6 +58,7 @@
     .menu-btn_burger::before, .menu-btn_burger::after{
             content: '';
             position: absolute;
+            z-index: 100;
             width: 20px;
             height: 5px;
             background-color: #56FFF5; 
@@ -64,10 +68,11 @@
 
         .menu-btn_burger::before{
             transform: translateY(-6px);
-
+            z-index: 100;
         }
         .menu-btn_burger::after {
             transform: translateY(6px);
+            z-index: 100;
         }
       
 }
@@ -89,7 +94,8 @@
 
 
 .menu-bar{
-    height: 90vh;
+    bottom: 0;
+    height: 85vh;
     width: 0px;
     position: absolute;
     transition: all 1s ease-in-out;
@@ -113,10 +119,10 @@
     }
 }
 .menu-bar.open{
-    height: 100vh;
+    height: 85vh;
     width: 150px;
-    top: 0;
-    z-index: 0;
+    bottom: 0;
+    z-index: 50;
     position: absolute;
     position: fixed;
     padding-top: 200px;
@@ -164,3 +170,9 @@
 
     }
   }
+
+  @media (max-width: 768px) {
+    .menu-btn{    
+    left: -40vw;
+  }
+}

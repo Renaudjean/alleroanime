@@ -12,7 +12,7 @@ class Categorie extends Controller {
 //         // $this->render('viewCategorie',['catSearch'=>$ApiCategorieSeries->CatSeries]);
 // }
 public function searchCategorie(){ 
-    $key = "query";
+    
     if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')  {
         $url = "https://";   
     }else  {
@@ -25,10 +25,13 @@ public function searchCategorie(){
 }
     $ApiCategorieSeries = $this->model('ApiCategorieSeries');
    $Cgenre ="genre";
-  
+    $key = "query";
     if( strpos($url, $key) == TRUE ){
         $check = $_GET['query'];
-        if($check != ''){
+        if( $check ==" "){
+            echo "There is no result under blank"; 
+        }
+        if($check != '' ){
             $searchMovies = $this->model('searchMovies');
             $this->render('viewCategorie',['searchResults'=>$searchMovies->searchM->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres, 'MovieGenres'=> '','SerieGenres'=>'']);
         } 
@@ -45,7 +48,7 @@ public function searchCategorie(){
     $GenreSeries = $this->model('GenreSeries');
     $this->render('viewCategorie',['MovieGenres'=>$GenreMovies->GenreM->results, 'SerieGenres'=>$GenreSeries->GenreS->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres,  'searchResults'=>'']);
     }
-    if( strpos($url, $genre) == TRUE){
+    if( strpos($url, $Cgenre) == TRUE){
         $searchMovies = $this->model('searchMovies');
         $this->render('viewCategorie',['CatSeries'=>'', 'MovieGenres'=> '','SerieGenres'=>'', 'searchResults'=>'']);
         }

@@ -1,23 +1,27 @@
 #main-accueil {
+    overflow: hidden;
     padding-top: 15vh;
     background-color:#1A1919;
     padding-top: 15vh;
     h4{
         padding-top: 30px;
-        margin-left: 300px;
+        margin-left: 15vw;
         color:#56FFF5 ;
     }
     .swiper {
         background-color: #3A3838;
-        width: clamp(800px, 1200px);
+        min-width: 200px;
+      
+        max-width: 1200px;
         z-index: 1;
         border-radius: 10px;
         .swiper-slide{
             text-align: center;
             margin-top: 10px;
-
+            margin-bottom: 10px;
+            min-width: 100px;
             h6{
-                width: 200px;
+                // width: 200px;
                 margin: 0 auto;
                 color:#56FFF5 ;
 
@@ -25,4 +29,49 @@
         }
     }
     
+}
+
+@media (max-width: 950px){
+    h6{
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 15px;
+        width: 100px;
+    }
+    .imgcard{
+        width: 150px;
+    }
+    .swiper-button-next{
+        right: -5px;
+        
+    }
+    .swiper-button-prev{
+        left: -5px;
+    }
+}
+@media (max-width: 715px){
+    .swiper {
+     width: 400px;
+    }
+    .swiper-slide{
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;     
+        h6{
+            margin-left: 0;
+            margin-right: 0;
+            font-size: 10px;
+            max-width: 100px;
+        }
+    }
+    .imgcard{
+        width: 100px;
+    }
+    .swiper-button-next{
+        right: -5px;
+        
+    }
+    .swiper-button-prev{
+        left: -5px;
+    }
 }

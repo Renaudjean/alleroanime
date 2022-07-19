@@ -55,7 +55,7 @@
               <h6 class="title"> <?= $SerieGenre->name; ?> </h6>
               <p class="overview"><?= $SerieGenre->overview;?> </p>
             </div>
-            <a href="../../Info/infoSeries/<?= $SerieGenre->id;?>" class="cover-photo"><img src="https://image.tmdb.org/t/p/w200/<?=$SerieGenre->poster_path?>"></a>
+            <a href="../../Info/infoSeries/<?= $SerieGenre->id;?>" class="cover-photo"><img src="https://image.tmdb.org/t/p/w200/<?=$SerieGenre->poster_path?> "></a>
             </div>
             </div>
           <?php $picture =$SerieGenre->poster_path;

@@ -11,4 +11,6 @@ menuBtn.addEventListener('click',()=> {
         menuBar.classList.remove('open');
         menuOpen=false;
     }
+
+    
 });
