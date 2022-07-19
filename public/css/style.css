@@ -373,10 +373,47 @@
   color: #56FFF5;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 912px) {
   .clearfix {
     width: 100%;
     display: block;
+    text-align: center;
+  }
+  #h6-actors {
+    font-size: 1rem;
+    width: 50%;
+    margin: 0 20px;
+  }
+  #p-actors {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .swiper {
+    width: 100%;
+  }
+  .swiper h5 {
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 470px) {
+  #photo-actors {
+    width: 60px;
+  }
+  #h6-actors {
+    font-size: 1rem;
+    width: 50%;
+    margin: 0 20px;
+  }
+  #p-actors {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 390px) {
+  #h6-actors {
+    font-size: 1rem;
+    width: 50%;
+    margin: 0 10px;
   }
 }
 * {
