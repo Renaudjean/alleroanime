@@ -1,7 +1,7 @@
 
   <main id="main-categorie">
     <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Fantasy</a>
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Genre</a>
 
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 

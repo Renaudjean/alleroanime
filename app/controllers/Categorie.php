@@ -51,6 +51,7 @@ public function searchCategorie(){
     if( strpos($url, $Cgenre) == TRUE){
         $searchMovies = $this->model('searchMovies');
         $this->render('viewCategorie',['CatSeries'=>'', 'MovieGenres'=> '','SerieGenres'=>'', 'searchResults'=>'']);
+        
         }
     }
 
