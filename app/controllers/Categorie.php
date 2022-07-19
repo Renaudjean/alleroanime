@@ -45,9 +45,10 @@ public function searchCategorie(){
     $GenreSeries = $this->model('GenreSeries');
     $this->render('viewCategorie',['MovieGenres'=>$GenreMovies->GenreM->results, 'SerieGenres'=>$GenreSeries->GenreS->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres,  'searchResults'=>'']);
     }
-    if( strpos($url, $genre) == TRUE){
+    if( strpos($url, $Cgenre) == TRUE){
         $searchMovies = $this->model('searchMovies');
         $this->render('viewCategorie',['CatSeries'=>'', 'MovieGenres'=> '','SerieGenres'=>'', 'searchResults'=>'']);
+        
         }
     }
 
