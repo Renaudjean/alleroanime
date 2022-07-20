@@ -65,3 +65,55 @@
        
         
     }
+    @media screen and (max-width: 912px){
+        .counter{
+            margin: 75px 175px -25px 100px ;
+        }
+        .cat-photo{
+            max-width: 150px;
+        }
+
+        .overview{ 
+            
+            color: aqua;
+            display: -webkit-box !important;
+            -webkit-line-clamp: 7;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
+    @media screen and (max-width: 530px){
+        .counter{
+            margin: 75px 0 -25px  ;
+            width: 100%;
+        }
+        .cat-cards{
+            width: 100%;
+        }
+        .cat-photo{
+            max-width: 100px;
+        }
+        .overview{ 
+            font-size: 10px;
+            color: aqua;
+            display: -webkit-box !important;
+            -webkit-line-clamp: 7;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+    }
+    @media screen and (max-width:330px){
+        .cat-photo{
+            max-width: 100px;
+        }
+        .overview{ 
+            font-size: 10px;
+            color: aqua;
+            display: -webkit-box !important;
+            -webkit-line-clamp: 7;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+    }
