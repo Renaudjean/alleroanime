@@ -8,7 +8,7 @@
         <?php 
         // For the categorie drop down
         foreach($CatSeries as $CategoSerie){  ?>
-            <li><a class="dropdown-item" href="?id=<?=$CategoSerie->id?>"><?=$CategoSerie->name?></a></li>
+            <li><a class="dropdown-item" href="?id=<?=$CategoSerie->id?>-name=<?=$CategoSerie->name?>"><?=$CategoSerie->name?></a></li>
             <?php } ?>
         </ul>
     </div>
@@ -23,7 +23,7 @@
         <div class='counter'>
         <div class='cat-cards'>
         <div class='cell2'>
-        <h6 class="title"> <?= $searchResult->name; ?> </h6>
+        <a href="../../Info/infoMovies/<?= $searchResult->id;?>"><h6 class="title"> <?= $searchResult->name; ?> </h6></a>
         <p class="overview"><?= $searchResult->overview;?> </p>
         </div>
         <a href="../../Info/infoMovies/<?= $searchResult->id;?>" class="cover-photo"><img src="https://image.tmdb.org/t/p/w200/<?=$searchResult->poster_path?>"></a>
