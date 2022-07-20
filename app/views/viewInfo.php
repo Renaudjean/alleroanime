@@ -22,10 +22,10 @@
             <div class="swiper-wrapper">
                 <?php foreach($infoCredits->cast ?? $infoCreditsSeries->cast as $info){ ?>
                 <div class="swiper-slide">
-                <img src="https://image.tmdb.org/t/p/w92/<?= $info->profile_path ?>" alt="...">
+                <img id="photo-actors" src="https://image.tmdb.org/t/p/w92/<?= $info->profile_path ?>" alt="...">
                 <div>
-                  <h6><?=$info->name?></h6>
-                  <p><?=$info->character?></p>
+                  <h6 id="h6-actors"><?=$info->name?></h6>
+                  <p id="p-actors"><?=$info->character?></p>
                 </div> 
               </div>
            <?php }?>

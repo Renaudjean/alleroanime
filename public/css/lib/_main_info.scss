@@ -24,6 +24,7 @@
         #info-overviews{
             background-color: #3A3838;
             margin-top: 50px;
+            border-radius: 5px;
             h5{
                 color: #56FFF5;
                 margin-left: 15px;
@@ -65,5 +66,52 @@
         p{
             color: #56FFF5;
         }
+    }
+}
+
+//************ MEDIA QUERY ***********//
+
+@media screen and (max-width : 912px){
+
+    .clearfix{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    #h6-actors{
+        font-size: 1rem;
+        width: 50%;
+        margin:0 20px;
+    }
+    #p-actors{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width : 660px){
+    .swiper {
+        width: 100%;
+        h5{
+            margin-left: 10px;
+        }
+    }
+}
+@media screen and (max-width : 470px){
+    #photo-actors{
+        width: 60px;
+    }
+    #h6-actors{
+        font-size: 1rem;
+        width: 50%;
+        margin:0 20px;
+    }
+    #p-actors{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width : 390px){
+    #h6-actors{
+        font-size: 1rem;
+        width: 50%;
+        margin:0 10px;
     }
 }
