@@ -4,7 +4,7 @@
             <div class="swiper-wrapper">
                 <?php foreach($Series as $Serie){ ?>
                 <div class="swiper-slide">
-                    <a href="../../Info/infoSeries/<?=$Serie->id?>"><img class="imgcard" src="https://image.tmdb.org/t/p/w200/<?=$Serie->poster_path?>"></a>
+                    <a href="../../Info/infoSeries/?idserie=<?=$Serie->id?>"><img class="imgcard" src="https://image.tmdb.org/t/p/w200/<?=$Serie->poster_path?>"></a>
                     <h6><?= $Serie->name?></h6> 
                 </div>
                <?php }?>
@@ -18,7 +18,7 @@
             <div class="swiper-wrapper">
                 <?php foreach($Movies as $Movie){ ?>
                 <div class="swiper-slide">
-                    <a href="../../Info/infoMovies/<?=$Movie->id?>"><img class="imgcard" src="https://image.tmdb.org/t/p/w200/<?=$Movie->poster_path?>"></a>
+                    <a href="../../Info/infoMovies/?idmovie=<?=$Movie->id?>"><img class="imgcard" src="https://image.tmdb.org/t/p/w200/<?=$Movie->poster_path?>"></a>
                     <h6><?= $Movie->original_title?></h6> 
             </div>
            <?php }?>
