@@ -8,7 +8,7 @@
         <?php 
         // For the categorie drop down
         foreach($CatSeries as $CategoSerie){  ?>
-            <li><a class="dropdown-item" href="?id=<?=$CategoSerie->id?>-name=<?=$CategoSerie->name?>"><?=$CategoSerie->name?></a></li>
+            <li><a class="dropdown-item" href="?id=<?=$CategoSerie->id?>"><?=$CategoSerie->name?></a></li>
             <?php } ?>
         </ul>
     </div>
