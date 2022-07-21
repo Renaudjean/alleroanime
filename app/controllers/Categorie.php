@@ -5,12 +5,7 @@ class Categorie extends Controller {
         $this->index = $index;
        }
        
-//     public function genre(){ 
-       
-//         $this->render('viewCategorie');
-//         // var_dump($ApiCategorieSeries->CatSeries);
-//         // $this->render('viewCategorie',['catSearch'=>$ApiCategorieSeries->CatSeries]);
-// }
+
 public function searchCategorie(){ 
     
     if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')  {
