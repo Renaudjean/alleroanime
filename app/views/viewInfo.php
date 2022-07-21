@@ -13,10 +13,13 @@
             <h5>Synopsis</h5>
             <p id="p-overview"><?=$infoSeries ->overview?></p>
         </div>
+        <div id="div-trailers">
+          <iframe id="trailers" width="100%" height="315" src="https://www.youtube.com/embed/<?=$infoVideoTv->results[0]->key ?? $infoVideoMovies->results[0]->key?>" frameborder="0"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
- 
-    </div>
+    
+  </div>
     <section id="voice-actors"class="swiper mySwiper">
       <h5>Voice Actors</h5>
             <div class="swiper-wrapper">

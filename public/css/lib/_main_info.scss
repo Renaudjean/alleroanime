@@ -23,7 +23,7 @@
         }
         #info-overviews{
             background-color: #3A3838;
-            margin-top: 50px;
+            margin: 15px;
             border-radius: 5px;
             h5{
                 color: #56FFF5;
@@ -31,8 +31,11 @@
             }
             #p-overview{
                 color:#56FFF5;
-                margin: 0 15px;
+                margin: 0 15px 15px;
             }
+        }
+        #div-trailers{
+            margin:0 15px;
         }
     }
     
@@ -56,7 +59,7 @@
     }
     .swiper-slide{
         text-align: center;
-        margin-top: 10px;
+        margin: 10px auto;
         h6{
             width: 200px;
             margin: 0 auto;
@@ -68,6 +71,7 @@
         }
     }
 }
+
 
 //************ MEDIA QUERY ***********//
 

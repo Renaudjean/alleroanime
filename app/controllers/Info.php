@@ -12,9 +12,11 @@ class Info extends Controller {
         $ApiInfoCreditSeries = $this->model("ApiInfo");
         $creditSeries = $ApiInfoCreditSeries->getCreditsTv($index);
 
-        // var_dump($creditSeries);
-        $this->render('viewInfo',['infoSeries'=>$datasSeries, 'infoCreditsSeries' => $creditSeries]);
-        
+        $ApiInfoVideoSeries = $this->model("ApiInfo");
+        $videoSeries = $ApiInfoVideoSeries->getVideoTv($index);
+
+        // var_dump($videoSeries);
+        $this->render('viewInfo',['infoSeries'=>$datasSeries, 'infoCreditsSeries' => $creditSeries, 'infoVideoTv'=>$videoSeries]);
     }
     public function infoMovies($index){
         $ApiInfoMovies = $this->model("ApiInfoMovies");
@@ -22,8 +24,11 @@ class Info extends Controller {
         
         $ApiInfoCreditsMovies = $this->model("ApiInfoMovies");
         $creditMovies = $ApiInfoCreditsMovies->getCredits($index);
-        // var_dump($datasMovies);
+
+        $ApiInfoVideoMovies = $this->model("ApiInfoMovies");
+        $videoMovies = $ApiInfoVideoMovies->getVideoMovies($index);
+        // var_dump($videoMovies);
         // var_dump($creditMovies);
-        $this->render('viewInfo',['infoSeries'=> $datasMovies, 'infoCredits' => $creditMovies]);
+        $this->render('viewInfo',['infoSeries'=> $datasMovies, 'infoCredits' => $creditMovies, 'infoVideoMovies'=>$videoMovies]);
     }
 }  

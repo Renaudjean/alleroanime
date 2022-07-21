@@ -19,6 +19,13 @@ class ApiInfoMovies{
         $datasCreditsInfoMovies = json_decode($data);
         return $datasCreditsInfoMovies;
     }
-// https://api.themoviedb.org/3/tv/{tv_id}?api_key=<<api_key>>&language=en-US
+    public function getVideoMovies($index){
+        $datasVideoMovies = $this->Base_url."/movie/$index/videos?".$this->api_key.'&language=en-US';
+        $data = file_get_contents($datasVideoMovies);
+        $datasVideoInfoMovies = json_decode($data);
+        return $datasVideoInfoMovies;
+    }
 // https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
+//https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=<<api_key>>&language=en-US
+
 }

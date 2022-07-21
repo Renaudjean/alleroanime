@@ -19,6 +19,12 @@ class ApiInfo{
         $datasCreditsInfoSeries = json_decode($data);
         return $datasCreditsInfoSeries;
     }
+    public function getVideoTv($index){
+        $datasVideoTv = $this->Base_url."/tv/$index/videos?".$this->api_key.'&language=en-US';
+        $data = file_get_contents($datasVideoTv);
+        $datasVideoInfoSeries = json_decode($data);
+        return $datasVideoInfoSeries;
+    }
      
 // https://api.themoviedb.org/3/tv/{tv_id}?api_key=<<api_key>>&language=en-US
 // https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
