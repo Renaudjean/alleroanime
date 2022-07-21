@@ -34,8 +34,10 @@ class Info extends Controller {
         // var_dump($videoSeries);
         $this->render('viewInfo',['infoSeries'=>$datasSeries, 'infoCreditsSeries' => $creditSeries, 'infoVideoTv'=>$videoSeries]);
     }
-<<<<<<< HEAD
-    public function infoMovies($index){
+}
+    public function infoMovies(){
+        if( strpos($url, $keymovie) == TRUE ){
+            $index=$_GET['idmovie'];
         $ApiInfoMovies = $this->model("ApiInfoMovies");
         $datasMovies = $ApiInfoMovies->getInfoM($index);
         
@@ -47,21 +49,6 @@ class Info extends Controller {
         // var_dump($videoMovies);
         // var_dump($creditMovies);
         $this->render('viewInfo',['infoSeries'=> $datasMovies, 'infoCredits' => $creditMovies, 'infoVideoMovies'=>$videoMovies]);
+            }
+        }  
     }
-}  
-=======
-
-    if( strpos($url, $keymovie) == TRUE ){
-            $index=$_GET['idmovie'];
-            $ApiInfoMovies = $this->model("ApiInfoMovies");
-            $datasMovies = $ApiInfoMovies->getInfoM($index);
-            
-            $ApiInfoCreditsMovies = $this->model("ApiInfoMovies");
-            $creditMovies = $ApiInfoCreditsMovies->getCredits($index);
-            // var_dump($datasMovies);
-            // var_dump($creditMovies);
-            $this->render('viewInfo',['infoSeries'=> $datasMovies, 'infoCredits' => $creditMovies]);
-         }
-    }  
-}
->>>>>>> 82bbd12b7d86be8c16d30082ecb115456fe08cc5
