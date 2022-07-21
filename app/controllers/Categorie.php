@@ -51,13 +51,6 @@ public function searchCategorie(){
         $GenreMovies = $this->model('CatMovies');
         $GenreSeries = $this->model('CatSeries');
         $this->render('viewCategorie',['MovieGenres'=>$GenreMovies->GenreM->results, 'SerieGenres'=>$GenreSeries->GenreS->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres,  'searchResults'=>'', 'GenreID'=>$GenreId]);
+        }
     }
-    
-   
-    }
-
-  
-        
-        
-   
 }

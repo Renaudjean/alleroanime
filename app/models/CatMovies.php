@@ -13,5 +13,4 @@ class CatMovies{
         $this->GenreMov = file_get_contents($this->GenreMovies) ;
         $this->GenreM = json_decode($this->GenreMov); 
     }
-
 }

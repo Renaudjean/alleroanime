@@ -13,5 +13,4 @@ class CatSeries{
         $this->GenreSer = file_get_contents($this->GenreSeries) ;
         $this->GenreS = json_decode($this->GenreSer); 
     }
-
 }

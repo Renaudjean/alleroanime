@@ -11,7 +11,6 @@ class ApiInfoMovies{
         $data = file_get_contents($datasMovies);
         $datasInfoMovies = json_decode($data);
         return $datasInfoMovies;
-        
     }
     public function getCredits($index){
         $datasCreditsMovies = $this->Base_url."/movie/$index/credits?".$this->api_key.'&language=en-US';
