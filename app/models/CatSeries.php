@@ -9,7 +9,7 @@ class CatSeries{
     public $GenreSer;
     public $GenreS;
     public function __construct(){
-        $this->GenreSeries = $this->Base_url.'/discover/tv?'.$this->api_key.'&language=en-US&with_genres=16';   
+        $this->GenreSeries = $this->Base_url.'/discover/tv?'.$this->api_key.'&language=en-US&page=1&with_genres=16';   
         $this->GenreSer = file_get_contents($this->GenreSeries) ;
         $this->GenreS = json_decode($this->GenreSer); 
     }
