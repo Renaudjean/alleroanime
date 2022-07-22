@@ -4,7 +4,12 @@
       <img src="https://image.tmdb.org/t/p/w300/<?= $infoSeries->poster_path ?>" alt="...">
       <div id="info-container">
         <div>
-            <h4 id="titre-info"><?=$infoSeries->name ?? $infoSeries->title?></h4>
+            <h4 id="titre-info"><?php
+            if($infoSeries->name == TRUE){
+              echo $infoSeries->name;
+            }else{
+              echo $infoSeries->title;
+            } ?></h4>
           <?php foreach($infoSeries->genres  as $nameGenre){  ?>
             <p id="p-name"><?=$nameGenre->name?>,</p>
             <?php } ?>
@@ -14,7 +19,9 @@
             <p id="p-overview"><?=$infoSeries ->overview?></p>
         </div>
         <div id="div-trailers">
-          <iframe id="trailers" width="100%" height="315" src="https://www.youtube.com/embed/<?=$infoVideoTv->results[0]->key ?? $infoVideoMovies->results[0]->key?>" frameborder="0"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe id="trailers" width="100%" height="315" src="https://www.youtube.com/embed/<?php if($infoVideoTv->results[0]->key== TRUE){
+            echo $infoVideoTv->results[0]->key;
+            }else{ echo $infoVideoMovies->results[0]->key;}?>" frameborder="0"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
