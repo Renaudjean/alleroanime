@@ -16,13 +16,28 @@ public function searchCategorie(){
     $url.= $_SERVER['HTTP_HOST'];   
 
     // Append the requested resource location to the URL   
-    $url.= $_SERVER['REQUEST_URI'];    
+    $url.= $_SERVER['REQUEST_URI']; 
 }
     $ApiCategorieSeries = $this->model('ApiCategorieSeries');
-    $key = "query";
-    $Cgenre="id";
-    
-    if( strpos($url, $key) == TRUE ){
+
+    $Cgenre="?id=";
+    if(strpos($url, $Cgenre) == FALSE ){
+    $GenreMovies = $this->model('GenreMovies');
+    $GenreSeries = $this->model('GenreSeries');
+    $this->render('viewCategorie',['MovieGenres'=>$GenreMovies->GenreM->results, 'SerieGenres'=>$GenreSeries->GenreS->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres, 'searchResults'=>'', 'GenreID'=>'']);
+    } 
+    }
+    public function searchGenre(){ 
+        $ApiCategorieSeries = $this->model('ApiCategorieSeries');
+        $GenreId= $_GET['id'];  
+        $GenreMovies = $this->model('CatMovies');
+        $GenreSeries = $this->model('CatSeries');
+        
+        $this->render('viewCategorie',['MovieGenres'=>$GenreMovies->GenreM->results, 'SerieGenres'=>$GenreSeries->GenreS->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres,  'searchResults'=>'', 'GenreID'=>$GenreId]);
+       
+    }
+    public function search(){ 
+        $ApiCategorieSeries = $this->model('ApiCategorieSeries');
         $check = $_GET['query'];
         if( $check ==" "){
             echo "There is no result under blank"; 
@@ -37,21 +52,6 @@ public function searchCategorie(){
         $GenreSeries = $this->model('GenreSeries');
         $this->render('viewCategorie',['MovieGenres'=>$GenreMovies->GenreM->results, 'SerieGenres'=>$GenreSeries->GenreS->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres,  'searchResults'=>'', 'GenreID'=>'']);
             
-        }
-    }
-    
-    if( strpos($url, $key) == FALSE && strpos($url, $Cgenre) == FALSE ){
-    $GenreMovies = $this->model('GenreMovies');
-    $GenreSeries = $this->model('GenreSeries');
-    $this->render('viewCategorie',['MovieGenres'=>$GenreMovies->GenreM->results, 'SerieGenres'=>$GenreSeries->GenreS->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres,  'searchResults'=>'', 'GenreID'=>'']);
-    } 
-    
-    if( strpos($url, $Cgenre) == TRUE){
-        $GenreId= $_GET['id'];  
-        $GenreMovies = $this->model('CatMovies');
-        $GenreSeries = $this->model('CatSeries');
-        
-        $this->render('viewCategorie',['MovieGenres'=>$GenreMovies->GenreM->results, 'SerieGenres'=>$GenreSeries->GenreS->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres,  'searchResults'=>'', 'GenreID'=>$GenreId]);
         }
     }
 }

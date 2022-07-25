@@ -5,7 +5,19 @@
       <div id="info-container">
         <div>
             <h4 id="titre-info"><?php
-            if($infoSeries->name == TRUE){
+             if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')  {
+              $url = "https://";   
+          }else  {
+              $url = "http://";   
+          // Append the host(domain name, ip) to the URL.   
+          $url.= $_SERVER['HTTP_HOST'];   
+      
+          // Append the requested resource location to the URL   
+          $url.= $_SERVER['REQUEST_URI'];    
+      }
+      $keyserie = "idserie";
+      
+             if( strpos($url, $keyserie) == TRUE ){
               echo $infoSeries->name;
             }else{
               echo $infoSeries->title;

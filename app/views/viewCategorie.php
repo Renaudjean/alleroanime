@@ -8,7 +8,7 @@
         <?php 
         // For the categorie drop down
         foreach($CatSeries as $CategoSerie){  ?>
-            <li><a class="dropdown-item" href="?id=<?=$CategoSerie->id?>"><?=$CategoSerie->name?></a></li>
+            <li><a class="dropdown-item" href="../../Categorie/searchGenre/?id=<?=$CategoSerie->id?>"><?=$CategoSerie->name?></a></li>
             <?php } ?>
         </ul>
     </div>
@@ -76,7 +76,7 @@
                     <h6 class="title"><?= $MovieGenre->original_title;?> </h6>
                     <p class="overview"><?= $MovieGenre->overview;?> </p>
                   </div>
-                  <a href="../../Info/infoSeries/?idmovie=<?= $MovieGenre->id;?>" class="cover-photo cat-photo"><img class="cat-photo" src="https://image.tmdb.org/t/p/w200/<?=$MovieGenre->poster_path?>"></a>
+                  <a href="../../Info/infoMovies/?idmovie=<?= $MovieGenre->id;?>" class="cover-photo cat-photo"><img class="cat-photo" src="https://image.tmdb.org/t/p/w200/<?=$MovieGenre->poster_path?>"></a>
                   </div>
                   </div>
                 <?php  }else{
@@ -105,7 +105,7 @@
                 <h6 class="title"><?= $MovieGenre->original_title;?> </h6>
                 <p class="overview"><?= $MovieGenre->overview;?> </p>
               </div>
-              <a href="../../Info/infoSeries/?idmovie=<?= $MovieGenre->id;?>" class="cover-photo cat-photo"><img class="cat-photo" src="https://image.tmdb.org/t/p/w200/<?=$MovieGenre->poster_path?>"></a>
+              <a href="../../Info/infoMovies/?idmovie=<?= $MovieGenre->id;?>" class="cover-photo cat-photo"><img class="cat-photo" src="https://image.tmdb.org/t/p/w200/<?=$MovieGenre->poster_path?>"></a>
               </div>
               </div>
             <?php   }
