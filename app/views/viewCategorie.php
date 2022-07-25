@@ -39,7 +39,7 @@
           <h6 class="title"><?= $searchResult->original_title;?> </h6>
           <p class="overview"><?= $searchResult->overview;?> </p>
         </div>
-        <a href="../../Info/infoSeries/?idmovie=<?= $searchResult->id;?> " class="cover-photo cat-photo"><img class="cat-photo" src="https://image.tmdb.org/t/p/w200/<?=$searchResult->poster_path?>"></a>
+        <a href="../../Info/infoMovies/?idmovie=<?= $searchResult->id;?> " class="cover-photo cat-photo"><img class="cat-photo" src="https://image.tmdb.org/t/p/w200/<?=$searchResult->poster_path?>"></a>
         </div>
        </div>
        <?php  }

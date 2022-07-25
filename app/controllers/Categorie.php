@@ -27,6 +27,8 @@ public function searchCategorie(){
     $this->render('viewCategorie',['MovieGenres'=>$GenreMovies->GenreM->results, 'SerieGenres'=>$GenreSeries->GenreS->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres, 'searchResults'=>'', 'GenreID'=>'']);
     } 
     }
+
+    
     public function searchGenre(){ 
         $ApiCategorieSeries = $this->model('ApiCategorieSeries');
         $GenreId= $_GET['id'];  
@@ -39,9 +41,6 @@ public function searchCategorie(){
     public function search(){ 
         $ApiCategorieSeries = $this->model('ApiCategorieSeries');
         $check = $_GET['query'];
-        if( $check ==" "){
-            echo "There is no result under blank"; 
-        }
         if($check != '' ){
             $searchMovies = $this->model('searchMovies');
             $this->render('viewCategorie',['searchResults'=>$searchMovies->searchM->results, 'CatSeries'=>$ApiCategorieSeries->CatSeries->genres, 'MovieGenres'=> '','SerieGenres'=>'', 'GenreID'=>'']);
