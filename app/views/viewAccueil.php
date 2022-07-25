@@ -18,7 +18,7 @@
             <div class="swiper-wrapper">
                 <?php foreach($Movies as $Movie){ ?>
                 <div class="swiper-slide">
-                    <a href="../../Info/infoSeries/idmovie=<?=$Movie->id?>"><img class="imgcard" src="https://image.tmdb.org/t/p/w200/<?=$Movie->poster_path?>"></a>
+                    <a href="../../Info/infoMovies/idmovie=<?=$Movie->id?>"><img class="imgcard" src="https://image.tmdb.org/t/p/w200/<?=$Movie->poster_path?>"></a>
                     <h6><?= $Movie->original_title?></h6> 
             </div>
            <?php }?>

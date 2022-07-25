@@ -1,17 +1,17 @@
 <main id="main-info">
     <?php //var_dump($infoSeries)?>
     <div class="clearfix">
-      <img src="https://image.tmdb.org/t/p/w300/<?= $infoSeries->poster_path ?>" alt="...">
+      <img src="https://image.tmdb.org/t/p/w300/<?= $infoSeries->poster_path ?? $infoMovies->poster_path?>" alt="...">
       <div id="info-container">
         <div>
-            <h4 id="titre-info"><?=$infoSeries->name ?? $infoSeries->title?></h4>
-          <?php foreach($infoSeries->genres  as $nameGenre){  ?>
+            <h4 id="titre-info"><?=$infoSeries->name ?? $infoMovies->title?></h4>
+          <?php foreach($infoSeries->genres ?? $infoMovies->genres  as $nameGenre){  ?>
             <p id="p-name"><?=$nameGenre->name?>,</p>
             <?php } ?>
         </div>
         <div id="info-overviews">
             <h5>Synopsis</h5>
-            <p id="p-overview"><?=$infoSeries ->overview?></p>
+            <p id="p-overview"><?=$infoSeries ->overview ?? $infoMovies->overview?></p>
         </div>
         <div id="div-trailers">
           <iframe id="trailers" width="100%" height="315" src="https://www.youtube.com/embed/<?=$infoVideoTv->results[0]->key ?? $infoVideoMovies->results[0]->key?>" frameborder="0"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
