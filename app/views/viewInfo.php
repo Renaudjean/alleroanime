@@ -21,9 +21,9 @@
             <p id="p-overview"><?=$infoSeries ->overview?></p>
         </div>
         <div id="div-trailers">
-          <iframe id="trailers" width="100%" height="315" src="https://www.youtube.com/embed/<?php if($infoVideoTv->results[0]->key== TRUE){
+          <iframe id="trailers" width="100%" height="315" src="https://www.youtube.com/embed/<?php
             echo $infoVideoTv->results[0]->key;
-            }else{ echo $infoVideoMovies->results[0]->key;}?>" frameborder="0"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            ?>" frameborder="0"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
