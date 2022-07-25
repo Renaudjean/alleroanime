@@ -35,7 +35,7 @@ public function infoMovies(){
             $videoMovies = $ApiInfoVideoMovies->getVideoMovies($index);
             // var_dump($videoMovies);
             // var_dump($creditMovies);
-            $this->render('viewInfo',['infoSeries'=> $datasMovies, 'infoCredits' => $creditMovies, 'infoVideoMovies'=>$videoMovies]);
+            $this->render('viewInfoMovie',['infoSeries'=> $datasMovies, 'infoCredits' => $creditMovies, 'infoVideoMovies'=>$videoMovies]);
                 }
             }  
  

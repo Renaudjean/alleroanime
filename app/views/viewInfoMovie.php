@@ -5,12 +5,8 @@
       <div id="info-container">
         <div>
             <h4 id="titre-info">
-              <?php
-          
-         
-              echo $infoSeries->name;
-          
-            
+              <?php   
+              echo $infoSeries->title;
             ?></h4>
           <?php foreach($infoSeries->genres  as $nameGenre){  ?>
             <p id="p-name"><?=$nameGenre->name?>,</p>
