@@ -6,48 +6,36 @@ class Info extends Controller {
         $this->index = $index;
    }
     
-    public function infoSeries($param){
-        $params = explode("=",$param);
-
- 
-        $keyserie = "idserie";
+    public function infoSeries(){
     
-    
-    
+        $index=$_GET['idserie'];
         $ApiInfo = $this->model("ApiInfo");
-        $datasSeries = $ApiInfo->getInfoTv($params[1]);
+        $datasSeries = $ApiInfo->getInfoTv($index);
 
         $ApiInfoCreditSeries = $this->model("ApiInfo");
-        $creditSeries = $ApiInfoCreditSeries->getCreditsTv($params[1]);
+        $creditSeries = $ApiInfoCreditSeries->getCreditsTv($index);
 
         $ApiInfoVideoSeries = $this->model("ApiInfo");
-        $videoSeries = $ApiInfoVideoSeries->getVideoTv($params[1]);
+        $videoSeries = $ApiInfoVideoSeries->getVideoTv($index);
 
         $this->render('viewInfo',['infoSeries'=>$datasSeries, 'infoCreditsSeries' => $creditSeries, 'infoVideoTv'=>$videoSeries]);
     
-
-    }
-    
-    
-    
-    
-    
-    public function infoMovies($param){
-        $params = explode("=",$param);
-        $keymovie = "idmovie";
-          
-          $ApiInfoMovies = $this->model("ApiInfoMovies");
-          $datasMovies = $ApiInfoMovies->getInfoM($params[1]);
-          
-          $ApiInfoCreditsMovies = $this->model("ApiInfoMovies");
-          $creditMovies = $ApiInfoCreditsMovies->getCredits($params[1]);
-    
-          $ApiInfoVideoMovies = $this->model("ApiInfoMovies");
-          $videoMovies = $ApiInfoVideoMovies->getVideoMovies($params[1]);
-          $this->render('viewInfo',['infoMovies'=> $datasMovies, 'infoCredits' => $creditMovies, 'infoVideoMovies'=>$videoMovies]);
-
-    }
 }
+public function infoMovies(){
+          
+            $index=$_GET['idmovie'];
+            $ApiInfoMovies = $this->model("ApiInfoMovies");
+            $datasMovies = $ApiInfoMovies->getInfoM($index);
+            
+            $ApiInfoCreditsMovies = $this->model("ApiInfoMovies");
+            $creditMovies = $ApiInfoCreditsMovies->getCredits($index);
+    
+            $ApiInfoVideoMovies = $this->model("ApiInfoMovies");
+            $videoMovies = $ApiInfoVideoMovies->getVideoMovies($index);
+            // var_dump($videoMovies);
+            // var_dump($creditMovies);
+            $this->render('viewInfo',['infoSeries'=> $datasMovies, 'infoCredits' => $creditMovies, 'infoVideoMovies'=>$videoMovies]);
+                }
+            }  
  
-
-
+    
